@@ -40,8 +40,7 @@ selectTable("USUARIOS")
 
 consulta = CURSOR.fetchall()
 print("Consulta: ")
-for row in consulta:
-    pprint(row)
+show = [pprint(row) for row in consulta]
 
 removeTable("USUARIOS", "01")
 
@@ -50,10 +49,7 @@ selectTable("JOGOS")
 
 consulta = CURSOR.fetchall()
 print("Consulta: ")
-for row in consulta:
-    pprint(row)
-
-
+show = [pprint(row) for row in consulta]
 
 CURSOR.close()
 db.close()
